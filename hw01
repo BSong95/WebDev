@@ -4,7 +4,7 @@ server {
 
         root /home/bryan/www/main/hw01/;
 
-        index index.html;
+        index hw01.html;
 
         server_name hw01.bryansong.com;
 
