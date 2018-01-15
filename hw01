@@ -2,9 +2,9 @@ server {
         listen 80;
         listen [::]:80;
 
-        root /home/bryan/www/hw01;
+        root /home/bryan/www/main/hw01/;
 
-        index hw01.html;
+        index index.html;
 
         server_name hw01.bryansong.com;
 
