@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HW02 Task 2</title>
+  <script>
+  var counter = 10;
+
+  function displayCount() {
+    alert(counter);
+  }
+
+  function addToCount() {
+    counter++;
+  }
+
+  function appendCount() {
+    var newPara = document.createElement("P");
+    newPara.appendChild(document.createTextNode(counter));
+    document.body.appendChild(newPara);
+  }
+  </script>
+</head>
+<body>
+
+  <h1>10</h1>
+  <button onclick="displayCount()">Display Count</button>
+  <button onclick="addToCount()">Add to the Count</button>
+  <button onclick="appendCount()">Append it to the Page</button>
+
+</body>
+</html>
