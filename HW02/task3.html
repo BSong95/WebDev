@@ -42,7 +42,7 @@
       bottlesText = ""
       for (i = 99; i > 95; i--) {
         bottlesText = bottlesText.concat("<p>" + i + " bottles of beer on the \
-        wall, 99 bottles of beer.<br/> Take one down, pass it around, " + (i - 1) +
+        wall, " + i + " bottles of beer.<br/> Take one down, pass it around, " + (i - 1) +
         " bottles of beer on the wall...</p>")
       }
       document.getElementById("rightText").innerHTML = bottlesText;
