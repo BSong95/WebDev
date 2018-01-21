@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HW02 Task 3</title>
+  <style>
+  .content { float: right; width: 66%; }
+  .link { float: left; width: 33%; text-align: center;}
+  h1 { text-align: center; }
+  </style>
+</head>
+
+<body onload="displayRight(1)">
+  <h1>HW02 Task Three</h1>
+  <div class="link">
+    <p><a href="#" id="ipsum">Lorem Ipsum</a>
+    <p><a href="#" id="bottles">99 Bottles</a>
+    <p><a href="#" id="last">Last Thing</a>
+  </div>
+  <div class="content">
+    <p id="rightText"></p>
+  </div>
+
+  <script>
+  var ipsumText = "<p>Lorem ipsum dolor sit amet, consectetur \
+  adipiscing elit, sed do eiusmod tempor incididunt ut labore \
+  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud \
+  exercitation ullamco laboris nisi ut aliquip ex ea commodo \
+  consequat. Duis aute irure dolor in reprehenderit in voluptate \
+  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur \
+  sint occaecat cupidatat non proident, sunt in culpa qui \
+  officia deserunt mollit anim id est laborum.</p>";
+
+  var bottlesText = ""
+
+  function displayRight(link) {
+    var val = parseInt(link);
+
+    if (val == 1) {
+      document.getElementById("rightText").innerHTML = ipsumText.repeat(4);
+    } else if (val == 2) {
+      bottlesText = ""
+      for (i = 99; i > 95; i--) {
+        bottlesText = bottlesText.concat("<p>" + i + " bottles of beer on the \
+        wall, 99 bottles of beer.<br/> Take one down, pass it around, " + (i - 1) +
+        " bottles of beer on the wall...</p>")
+      }
+      document.getElementById("rightText").innerHTML = bottlesText;
+    } else {
+      document.getElementById("rightText").innerHTML = "This is the third thing.";
+    }
+  }
+  document.getElementById("ipsum").onclick = function () { displayRight(1); }
+  document.getElementById("bottles").onclick = function () { displayRight(2); }
+  document.getElementById("last").onclick = function () { displayRight(3); }
+  </script>
+</body>
+</html>
